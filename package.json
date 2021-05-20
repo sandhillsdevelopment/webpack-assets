@@ -2,7 +2,23 @@
   "name": "webpack-assets",
   "version": "1.0.0",
   "description": "webpack asset handling example.",
-  "main": "index.js",
+  "author": "Sandhills Development, LLC",
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "webpack"
+  ],
+  "homepage": "https://github.com/sandhillsdevelopment/webpack-assets#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandhillsdevelopment/webpack-assets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sandhillsdevelopment/webpack-assets/issues"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^16.0.0",
+    "ignore-emit-webpack-plugin": "^2.0.6"
+  },
   "scripts": {
     "build": "wp-scripts build --webpack-no-externals && npm run i18n",
     "format": "wp-scripts format",
@@ -11,22 +27,5 @@
     "lint:js": "wp-scripts lint-js",
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "start": "wp-scripts start --webpack-no-externals"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sandhillsdevelopment/webpack-assets.git"
-  },
-  "keywords": [
-    "webpack"
-  ],
-  "author": "Sandhills Development, LLC",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/sandhillsdevelopment/webpack-assets/issues"
-  },
-  "homepage": "https://github.com/sandhillsdevelopment/webpack-assets#readme",
-  "devDependencies": {
-    "@wordpress/scripts": "^16.0.0",
-    "ignore-emit-webpack-plugin": "^2.0.6"
   }
 }
