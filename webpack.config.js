@@ -31,6 +31,8 @@ module.exports = {
 		// Disable automatic splitting of modules in to separate files when
 		// CSS is detected. CSS is loaded directly through entry points instead
 		// of imported within a JS module.
+		//
+		// https://github.com/WordPress/gutenberg/blob/trunk/packages/scripts/config/webpack.config.js#L114-L119
 		splitChunks: {
 			...defaultConfig.optimization.splitChunks,
 			cacheGroups: {
