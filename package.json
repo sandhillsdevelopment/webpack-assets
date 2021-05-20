@@ -1,0 +1,33 @@
+{
+  "name": "webpack-assets",
+  "version": "1.0.0",
+  "description": "webpack asset handling example.",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build --webpack-no-externals && npm run i18n",
+    "format": "wp-scripts format",
+    "i18n": "wp i18n make-pot . languages/webpack-assets.pot --domain=webpack-assets",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "start": "wp-scripts start --webpack-no-externals"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandhillsdevelopment/webpack-assets.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Sandhills Development, LLC",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/sandhillsdevelopment/webpack-assets/issues"
+  },
+  "homepage": "https://github.com/sandhillsdevelopment/webpack-assets#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^16.0.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "webpack-fix-style-only-entries": "^0.6.1"
+  }
+}
