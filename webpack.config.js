@@ -15,16 +15,16 @@ module.exports = {
 	...defaultConfig,
 	entry: {
 		// Scripts.
-		index: path.resolve( cwd, 'assets/js/src', 'index.js' ),
+		index: path.resolve( cwd, 'assets/js', 'index.js' ),
 
 		// Styles.
 		// Prefix all entry points with `style-` to ensure style-only entry points
 		// do not generate extraneous .js files.
-		'style-index': path.resolve( cwd, 'assets/css/src', 'style.scss' ),
+		'style-index': path.resolve( cwd, 'assets/css', 'style.scss' ),
 	},
 	output: {
 		...defaultConfig.output,
-		path: path.resolve( process.cwd(), 'assets/js/build' ),
+		path: path.resolve( cwd, 'assets/build' ),
 	},
 	optimization: {
 		...defaultConfig.optimization,
