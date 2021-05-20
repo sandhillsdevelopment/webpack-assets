@@ -36,7 +36,7 @@ Transforms your code according the configuration provided so it’s ready for de
 
 ### wp-cli
 
-The [`i18n`](#i18n) script requires [wp-cli](https://wp-cli.org) and the [`wp-cli/i18n-command](https://github.com/wp-cli/i18n-command) to be available in the current environment.
+The [`i18n`](#i18n) script requires [wp-cli](https://wp-cli.org) and the [`wp-cli/i18n-command`](https://github.com/wp-cli/i18n-command) to be available in the current environment.
 
 ### WordPress < 5.0 Support
 
