@@ -27,7 +27,6 @@
   "homepage": "https://github.com/sandhillsdevelopment/webpack-assets#readme",
   "devDependencies": {
     "@wordpress/scripts": "^16.0.0",
-    "mini-css-extract-plugin": "^1.6.0",
-    "webpack-fix-style-only-entries": "^0.6.1"
+    "ignore-emit-webpack-plugin": "^2.0.6"
   }
 }

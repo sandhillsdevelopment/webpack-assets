@@ -2,8 +2,7 @@
  * External dependencies
  */
 const path = require( 'path' );
-const FixStyleOnlyEntriesPlugin = require( 'webpack-fix-style-only-entries' );
-const MiniCSSExtractPlugin = require( 'mini-css-extract-plugin' );
+const IgnoreEmitWebpackPlugin = require( 'ignore-emit-webpack-plugin' );
 
 /**
  * WordPress dependencies.
@@ -19,22 +18,30 @@ module.exports = {
 		index: path.resolve( cwd, 'assets/js/src', 'index.js' ),
 
 		// Styles.
-		'index-style': path.resolve( cwd, 'assets/css/src', 'style.scss' ),
+		// Prefix all entry points with `style-` to ensure style-only entry points
+		// do not generate extraneous .js files.
+		'style-index': path.resolve( cwd, 'assets/css/src', 'style.scss' ),
 	},
 	output: {
 		...defaultConfig.output,
 		path: path.resolve( process.cwd(), 'assets/js/build' ),
 	},
+	optimization: {
+		...defaultConfig.optimization,
+		// Disable automatic splitting of modules in to separate files when
+		// CSS is detected. CSS is loaded directly through entry points instead
+		// of imported within a JS module.
+		splitChunks: {
+			...defaultConfig.optimization.splitChunks,
+			cacheGroups: {
+				...defaultConfig.optimization.splitChunks.cacheGroups,
+				style: {},
+			},
+		},
+	},
 	plugins: [
 		...defaultConfig.plugins,
-		new FixStyleOnlyEntriesPlugin(),
-		new MiniCSSExtractPlugin( {
-			esModule: false,
-			moduleFilename: ( chunk ) =>
-				path.resolve(
-					cwd,
-					`assets/css/${ chunk.name.replace( '-style', '' ) }.css`
-				),
-		} ),
+		// Ignore files starting with `style-` from being emitted.
+		new IgnoreEmitWebpackPlugin( /style-(.*).js/ ),
 	],
 };
