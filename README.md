@@ -6,7 +6,7 @@ Utilize [webpack](https://webpack.js.org/), [`@wordpress/scripts`](https://www.n
 
 ### `build`
 
-Transforms your code according the configuration provided so it’s ready for production and optimized for the best performance. The output generated will be written to `assets/build`. This script exits after producing a single build. For incremental builds, better suited for development, see the [`#start`](start) script.
+Transforms your code according the configuration provided so it’s ready for production and optimized for the best performance. The output generated will be written to `assets/build`. This script exits after producing a single build. For incremental builds, better suited for development, see the [`start`](#start) script.
 
 ### `format`
 
