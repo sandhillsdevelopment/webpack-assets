@@ -16,15 +16,15 @@ It helps to enforce coding style guidelines for your files (JavaScript, YAML) by
 
 Generates a `.pot` translation file.
 
-### `lint-js`
+### `lint:js`
 
 Helps enforce coding style guidelines for your JavaScript files.
 
-### `lint-pkg-json`
+### `lint:pkg-json`
 
 Helps enforce standards for your `package.json` files.
 
-### `lint-style`
+### `lint:style`
 
 Helps enforce coding style guidelines for your style files.
 
